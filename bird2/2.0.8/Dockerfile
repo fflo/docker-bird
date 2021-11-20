@@ -47,6 +47,8 @@ VOLUME ["/bird"]
 COPY --from=builder /usr/local/sbin/bird* /usr/local/sbin/
 COPY --from=builder /etc/bird/bird.conf /bird/bird.default.conf
 
+# expose port(s)
+EXPOSE 179
 # run baby run
 CMD bird -c /bird/bird.conf -d
 
