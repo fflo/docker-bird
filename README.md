@@ -13,7 +13,7 @@ $ docker run fflo/bird -v /YourPathTo/bird.conf:/bird/bird.conf:ro
 ### Hint
 
 Do not forget to expose your BIRD Routing Daemon port(s) needed for communitcation with peers.
-For example Border Gateway Protocol (BGP) requires TCP port 179.
+Most probably you may be using the Border Gateway Protocol (BGP) with BIRD which requires TCP port 179.
 
 ```
 $ docker run fflo/bird -e 179:179 -v /YourPathTo/bird.conf:/bird/bird.conf:ro
